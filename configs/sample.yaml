@@ -1,0 +1,82 @@
+VERSION: 2
+
+SAMPLE_INTERVAL: 3.0
+
+CONF_TH: 0.5
+#MODEL_FILE: '/media/user/TOSHIBA EXT/ZHIXING/resources/models/faster_rcnn_R_50_FPN_3x/config.yaml'
+MODEL_FILE: '/media/user/Elements SE/ZHIXING/resources/models/faster_rcnn_R_50_FPN_3x/config.yaml'
+
+
+CLS:
+  0: 'paper'
+  1: 'bottle'
+  2: 'plastic'
+  3: 'rock'
+  4: 'bow'
+  5: 'leaf'
+  6: 'box'
+
+GPS:
+  PORT: "/dev/ttyUSB0"
+  BAUDRATE: 9600
+  STAKE_ID_FILE_PATH: "/media/user/Elements SE/ZHIXING/resources/stake_id.csv"
+  JUD_STAKE_ID_DISTANCE: 100  # 判断桩号距离
+  JUD_STAKE_ID_TIME_INTERVAL: 4 # second
+
+CAMERAS:
+#    - ID: "0"
+#      TYPE: "FILE"
+#      URL: "/media/user/Elements SE/ZHIXING/resources/videos/front_1.mp4"
+#    - ID: "3"
+#      TYPE: "FILE"
+#      URL: "/media/user/Elements SE/ZHIXING/resources/videos/back_1.mp4"
+#    - ID: "1"
+#      TYPE: "FILE"
+#      URL: "/media/user/Elements SE/ZHIXING/resources/videos/left.mp4"
+#    - ID: "2"
+#      TYPE: "FILE"
+#      URL: "/media/user/Elements SE/ZHIXING/resources/videos/right.mp4"
+
+#  - ID: "0"
+#    TYPE: "FILE"
+#    URL: "/media/user/TOSHIBA EXT/ZHIXING/videos/front.mp4"
+#  - ID: "3"
+#    TYPE: "FILE"
+#    URL: "/media/user/TOSHIBA EXT/ZHIXING/videos/back.mp4"
+#  - ID: "1"
+#    TYPE: "FILE"
+#    URL: "/media/user/TOSHIBA EXT/ZHIXING/videos/left.mp4"
+#  - ID: "2"
+#    TYPE: "FILE"
+#    URL: "/media/user/TOSHIBA EXT/ZHIXING/videos/right.mp4"
+
+#    - ID: "0"
+#      TYPE: "RTSP"
+#      URL: "rtsp://admin:12345678wwas@192.168.0.18:554/"
+#    - ID: "3"
+#      TYPE: "RTSP"
+#      URL: "rtsp://admin:12345678wwas@192.168.0.21:554/"
+#    - ID: "1"
+#      TYPE: "RTSP"
+#      URL: "rtsp://admin:12345678wwas@192.168.0.22:554/"
+#    - ID: "2"
+#      TYPE: "RTSP"
+#      URL: "rtsp://admin:12345678wwas@192.168.0.7:554/"
+
+#
+    - ID: "0"
+      TYPE: "RTSP"
+      URL: "rtsp://share:njzx1234@192.168.1.241:554/"
+    - ID: "3"
+      TYPE: "RTSP"
+      URL: "rtsp://share:njzx1234@192.168.1.242:554/"
+    - ID: "1"
+      TYPE: "RTSP"
+      URL: "rtsp://share:njzx1234@192.168.1.243:554/"
+    - ID: "2"
+      TYPE: "RTSP"
+      URL: "rtsp://share:njzx1234@192.168.1.244:554/"
+
+SAMPLE_CONDITION:
+  INTERVAL: 3 # second
+  SPEED: 3 # m/s
